@@ -38,6 +38,7 @@ func (u userService) Register(name string, email string) (*models.UserRequest, e
 		log.Error(err)
 	}
 
+	log.Info("create user Successfuly")
 	return message, nil
 }
 
@@ -57,6 +58,7 @@ func (u userService) UpdateAccount(id uint, req models.UserRequest) (*models.Use
 	if err != nil {
 		log.Error(err)
 	}
+	log.Info("update user Successfuly")
 	return message, nil
 }
 
@@ -70,5 +72,6 @@ func (u userService) DeleteAccount(id uint) (*string, error) {
 		log.Error(err)
 		return nil, errors.New("failed to delete user")
 	}
+	log.Info(deleteMessage)
 	return deleteMessage, nil
 }
