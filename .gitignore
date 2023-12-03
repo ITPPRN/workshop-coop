@@ -1,0 +1,18 @@
+# Ignore Visual Studio Code workspace and user-specific settings
+.vscode/
+*.code-workspace
+.vscodeignore
+.settings.json
+workshop1.code-workspace
+*.code-workspace
+test.txt
+
+./docker/
+docker/
+*.exe
+*.bat
+
+*/sqlc.yaml
+
+*/internal/
+*/sql/
